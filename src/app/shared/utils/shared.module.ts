@@ -18,5 +18,5 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     FormsModule,
   ],
 })
-export class AppCommonModule {
+export class SharedModule {
 }

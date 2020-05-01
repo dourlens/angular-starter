@@ -7,6 +7,8 @@ import {CommonModule} from '@angular/common';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './modules/home/home.component';
 import {AppTranslateModule} from './core/configurations/app-translate.module';
+import {IconComponent} from './shared/components/icon/icon.component';
+import {IconModule} from './shared/components/icon/icon.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import {AppTranslateModule} from './core/configurations/app-translate.module';
     BrowserModule,
     AppRoutingModule,
     AppTranslateModule,
+    IconModule,
   ],
   exports: [
     CommonModule,

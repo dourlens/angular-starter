@@ -16,5 +16,7 @@ export class AppComponent implements OnInit {
     this.translateService.use(lang).toPromise().then(() => this.initApp());
   }
 
-  private initApp() {}
+  private initApp() {
+    console.log('show')
+  }
 }

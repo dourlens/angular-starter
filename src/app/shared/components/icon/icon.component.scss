@@ -1,0 +1,25 @@
+// icon.component.scss
+
+$color-default : #000000;
+$color-primary : #44e1e6;
+
+.app-icon {
+  /**
+  ::ng-deep est fournit par angular, et permet de forcer les propriétés CSS,
+   C'est utilse car il se peut que vos SVG comportent déjà des propriétés dans leur fichier
+   */
+  ::ng-deep svg {
+    height : 2em;
+    fill   : $color-default;
+  }
+
+  &.primary {
+    ::ng-deep svg {
+      fill   : $color-primary;
+    }
+  }
+
+  &.max-size {
+    height : 4em;
+  }
+}
