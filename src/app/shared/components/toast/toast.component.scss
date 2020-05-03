@@ -1,0 +1,60 @@
+@import "~assets/scss/core/_animate.scss";
+@import "~assets/scss/core/_color.scss";
+@import "~assets/scss/core/_variable.scss";
+
+.toast {
+  z-index       : 99;
+  max-width     : 27em;
+  min-height    : 3em;
+  border-radius : 4px;
+  margin        : 0.8em;
+  cursor        : pointer;
+  display       : flex;
+  align-items   : stretch;
+  box-shadow    : $box-shadow-medium;
+
+  &__icon {
+    color                     : white;
+    padding                   : 0 0.5em;
+    align-items               : center;
+    display                   : flex;
+    border-bottom-left-radius : 4px;
+    border-top-left-radius    : 4px;
+  }
+
+  &__text {
+    background                 : $color-white;
+    display                    : flex;
+    align-items                : center;
+    padding                    : 0.7em;
+    font-size                  : 0.9em;
+    color                      : $color-black;
+    font-weight                : 600;
+    border-bottom-right-radius : 4px;
+    border-top-right-radius    : 4px;
+
+    i {
+      display : flex;
+    }
+  }
+
+  &.warning {
+
+    .toast__icon {
+      background : $color-danger;
+    }
+  }
+
+  &.success {
+
+    .toast__icon {
+      background : $color-primary;
+    }
+  }
+
+  .link {
+    color           : $color-black;
+    text-decoration : underline;
+    cursor          : pointer;
+  }
+}

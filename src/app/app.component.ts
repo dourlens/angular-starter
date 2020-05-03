@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import {ToastService} from '@app/core/services/toast/toast.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,9 @@ import {TranslateService} from '@ngx-translate/core';
 
 export class AppComponent implements OnInit {
 
-  constructor(private translateService: TranslateService) {}
+  constructor(private translateService: TranslateService,
+              private toastService: ToastService) {
+  }
 
   ngOnInit(): void {
     const lang = 'fr';
@@ -17,6 +20,10 @@ export class AppComponent implements OnInit {
   }
 
   private initApp() {
-    console.log('show')
+    this.toastService.show({
+      cssClass: 'warning',
+      message: 'Je suis un message d\'alert',
+      iconName: 'award'
+    });
   }
 }
